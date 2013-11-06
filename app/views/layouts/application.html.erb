@@ -2,13 +2,59 @@
 <html>
 <head>
   <title>Nx256</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag    "style", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<div id="Container">
+<div id="top">
+	<div class="wapper">
+		<a href="#">联系我们</a><span>|</span>服务热线:<b>0951-1234567</b>
+	</div>
+</div>
+<div id="Header">
+	<div class="wapper">
+		<div id="logo"><img src="/assets/logo.png" /></div>
+		<div class="navs">
+			<a href="/">首页</a>
+			<a href="/products">网站产品</a>
+			<a href="/sales">营销服务</a>
+			<a href="/tech_services">运营支持</a>
+			<a href="/about_us">关于我们</a>
+		</div>
+	</div>
+</div>
+<div id="PageBody">
 <%= yield %>
-
+</div>
+<div id="Footer">
+	<div id="foot" class="wapper clearfix">
+		<div class="foot-li">
+			<h4>在线服务</h4>
+			<ul>
+				<li>网店</li>
+				<li>测试申请</li>
+			</ul>
+		</div>
+		<div class="foot-li">
+			<h4>产品服务</h4>
+			<ul>
+				<li>网店</li>
+				<li>测试申请</li>
+			</ul>
+		</div>
+		<div class="f-contacts">
+			<h4>联系我们</h4>
+			<ul>
+				<li>QQ： </li>
+				<li>电话：</li>
+				<li>邮箱：</li>
+				<li>地址：</li>
+			</ul>
+		</div>
+	</div>
+	<div class="copy">Copyright &copy; 2012 - 2013 科技 All Right Reserved.</div>
+</div>
+</div>
 </body>
 </html>
