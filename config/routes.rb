@@ -1,8 +1,14 @@
 Nx256::Application.routes.draw do
   
-  match "products" => "start#products"
-  match "e-commerce" => "start#e-commerce"
-  match "services" => "start#services"
+  match "products" => "products#index"
+  match "products/(:action)" => "products"
+  
+  match "e-commerce" => "e-commerce#index"
+  match "e-commerce/(:action)" => "e-commerce"
+  
+  match "solutions" => "solutions#index"
+  match "solutions/(:action)" => "solutions"
+  
   match "about_us" => "start#about_us"
   
   

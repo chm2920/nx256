@@ -1,0 +1,11 @@
+		<ul>
+			<li class="first"><a href="/solutions"<% if @local.blank? %> class="cur"<% end %>>概述</a></li>
+			<li><a href="/solutions/education"<% if @local == "education" %> class="cur"<% end %>>教育</a></li>
+			<li><a href="/solutions/agriculture"<% if @local == "agriculture" %> class="cur"<% end %>>农业</a></li>
+			<li><a href="/solutions/medical"<% if @local == "medical" %> class="cur"<% end %>>医疗</a></li>
+			<li><a href="/solutions/transports"<% if @local == "transports" %> class="cur"<% end %>>交通物流</a></li>
+			<li><a href="/solutions/gov"<% if @local == "gov" %> class="cur"<% end %>>政务</a></li>
+			<li><a href="/solutions/city"<% if @local == "city" %> class="cur"<% end %>>环境、智慧城市</a></li>
+			<li><a href="/solutions/tour"<% if @local == "tour" %> class="cur"<% end %>>旅游</a></li>
+			<li><a href="/solutions/home"<% if @local == "home" %> class="cur"<% end %>>智能家居</a></li>
+		</ul>
