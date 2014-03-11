@@ -1,5 +1,5 @@
 		<ul>
-			<li class="first"><a href="/solutions"<% if @local.blank? %> class="cur"<% end %>>概述</a></li>
+			<li class="first"><a href="/solutions"<% if @local == "index" %> class="cur"<% end %>>概述</a></li>
 			<li><a href="/solutions/industry"<% if @local == "industry" %> class="cur"<% end %>>工业</a></li>
 			<li><a href="/solutions/service"<% if @local == "service" %> class="cur"<% end %>>服务业</a></li>
 			<li><a href="/solutions/education"<% if @local == "education" %> class="cur"<% end %>>教育</a></li>

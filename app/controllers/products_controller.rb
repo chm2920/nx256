@@ -1,19 +1,15 @@
 class ProductsController < ApplicationController
   
+  before_action :set_local
+  
   def index
     
   end
   
-  def website
-    @local = "website"
-  end
+private
   
-  def software
-    @local = "software"
-  end
-  
-  def app
-    @local = "app"
+  def set_local
+    @local = action_name
   end
   
 end

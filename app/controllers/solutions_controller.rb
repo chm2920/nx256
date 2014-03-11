@@ -1,39 +1,14 @@
 class SolutionsController < ApplicationController
-  
+
+  before_action :set_local
+
   def index
-    
   end
   
-  def education
-    @local = "education"
-  end
+private
   
-  def agriculture
-    @local = "agriculture"
-  end
-  
-  def medical
-    @local = "medical"
-  end
-  
-  def transports
-    @local = "transports"
-  end
-  
-  def gov
-    @local = "gov"
-  end
-  
-  def city
-    @local = "city"
-  end
-  
-  def tour
-    @local = "tour"
-  end
-  
-  def home
-    @local = "home"
+  def set_local
+    @local = action_name
   end
   
 end

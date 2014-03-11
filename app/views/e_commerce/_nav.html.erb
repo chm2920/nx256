@@ -1,5 +1,5 @@
 		<ul>
-			<li class="first"><a href="/ecommerce"<% if @local.blank? %> class="cur"<% end %>>概述</a></li>
+			<li class="first"><a href="/ecommerce"<% if @local == "index" %> class="cur"<% end %>>概述</a></li>
 			<li><a href="/ecommerce/products"<% if @local == "products" %> class="cur"<% end %>>网店程序</a></li>
 			<li><a href="/ecommerce/advertisements"<% if @local == "advertisements" %> class="cur"<% end %>>广告营销</a></li>
 			<li><a href="/ecommerce/services"<% if @local == "services" %> class="cur"<% end %>>运营支持</a></li>

@@ -1,19 +1,15 @@
 class ECommerceController < ApplicationController
   
+  before_action :set_local
+  
   def index
     
   end
   
-  def products
-    @local = "products"
-  end
+private
   
-  def advertisements
-    @local = "advertisements"
-  end
-  
-  def services
-    @local = "services"
+  def set_local
+    @local = action_name
   end
   
 end
