@@ -164,7 +164,7 @@
     <div class="col1">
         <div class="title">
             <h2>政策法规</h2>
-            <a href="">更多&gt;&gt;</a>
+            <a href="">法律法规</a><span>|</span><a href="">政策文件</a>
         </div>
         <ul class="article-list">
             <li><a href="">李洁丽总审计师主持召开省国土厅2013年度预算执行审计进点会</a></li>
@@ -178,11 +178,10 @@
     </div>
     
     <div class="col2">
-        <div class="title">
-            <h2>创新亮点</h2>
-            <a href="">更多&gt;&gt;</a>
+        <div class="title" id="tabs">
+            <p><i class="active">创新亮点</i><i>文件汇编</i><i>西部博彩</i></p>
         </div>
-        <ul class="article-list">
+        <ul id="acticle_list_1" class="article-list">
             <li><a href="">李洁丽总审计师主持召开省国土厅2013年度预算执行审计进点会</a></li>
             <li><a href="">苏琦主任召开会议安排部署经责审计工作</a></li>
             <li><a href="">甘肃省审计学会赴台湾交流考察取得圆满成功</a></li>
@@ -191,12 +190,47 @@
             <li><a href="">省审计厅召开创建全国文明单位动员大会</a></li>
             <li><a href="">2013年全市低保救助人数比例呈现城市减少农村增加</a></li>
         </ul>
+        <ul id="acticle_list_2" class="article-list" style="display:none;">
+            <li><a href="">b李洁丽总审计师主持召开省国土厅2013年度预算执行审计进点会</a></li>
+            <li><a href="">苏琦主任召开会议安排部署经责审计工作</a></li>
+            <li><a href="">甘肃省审计学会赴台湾交流考察取得圆满成功</a></li>
+            <li><a href="">省审计厅加强政府机关正版软件采购经费及资产管理审计</a></li>
+            <li><a href="">武毅厅长出席经济责任审计工作汇报会</a></li>
+            <li><a href="">省审计厅召开创建全国文明单位动员大会</a></li>
+            <li><a href="">2013年全市低保救助人数比例呈现城市减少农村增加</a></li>
+        </ul>
+        <ul id="acticle_list_3" class="article-list" style="display:none;">
+            <li><a href="">c李洁丽总审计师主持召开省国土厅2013年度预算执行审计进点会</a></li>
+            <li><a href="">苏琦主任召开会议安排部署经责审计工作</a></li>
+            <li><a href="">甘肃省审计学会赴台湾交流考察取得圆满成功</a></li>
+            <li><a href="">省审计厅加强政府机关正版软件采购经费及资产管理审计</a></li>
+            <li><a href="">武毅厅长出席经济责任审计工作汇报会</a></li>
+            <li><a href="">省审计厅召开创建全国文明单位动员大会</a></li>
+            <li><a href="">2013年全市低保救助人数比例呈现城市减少农村增加</a></li>
+        </ul>
     </div>
+    <script type="text/javascript">
+    	var tabs = document.getElementById('tabs').getElementsByTagName('i')
+    		, cur_item = tabs[0];
+    	for(var i = 0, item; item = tabs[i]; i ++){
+    		item.onmouseover = (function(i){
+	    			return function(){
+	    					cur_item.className = '';
+	    					tabs[i].className = 'active'
+	    					cur_item = tabs[i];
+		    				document.getElementById('acticle_list_1').style.display = 'none';
+		    				document.getElementById('acticle_list_2').style.display = 'none';
+		    				document.getElementById('acticle_list_3').style.display = 'none';
+		    				document.getElementById('acticle_list_' + (i+1)).style.display = '';
+		    			};
+	    		})(i);
+    	}
+    </script>
     
     <div class="col3 guanrong">
         <div class="title">
             <h2>光荣榜</h2>
-            <a href="">更多&gt;&gt;</a>
+            <a href="">更多</a>
         </div>
         <ul class="article-list">
             <li><a href="">李洁丽总审计师主持召开省国土厅2013年度预算执行审计进点会</a></li>

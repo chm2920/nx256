@@ -47,7 +47,11 @@ body { color: #555555; background: #9edbfa url(bg.png) repeat-x; }
 
 .title { height: 33px; line-height: 33px; padding-right: 12px; background: url(titlebg.png) repeat-x; text-align: right; }
 .title h2 { float: left; font-weight: bold; padding: 0 17px; font-size: 14px; background: url(titlebg.png) repeat-x 0 -33px; color: #FFF; }
-.title a { color: #cb280e; }
+.title p{float: left; }
+.title p i{padding: 0 17px; font-weight: bold;font-size: 14px;  color: #cb280e;}
+.title p i.active{background: url(titlebg.png) repeat-x 0 -33px;color:#FFF;}
+.title a {color: #cb280e; }
+.title span{padding:0 7px;color: #cb280e;}
 
 /*幻灯片*/
 .slider ul { overflow: hidden; }
@@ -76,7 +80,7 @@ body { color: #555555; background: #9edbfa url(bg.png) repeat-x; }
 .contact li.weiquan { background-position: 0 -174px; }
 .contact li a{display:block;width:219px;height:58px;}
 
-.guanrong .title { line-height: 29px; background: url(guangrong-title.jpg) no-repeat; }
+.guanrong .title {padding-left:12px;padding-top:2px; line-height: 29px; background: url(sidebar-title.jpg) no-repeat; }
 .guanrong .title h2 { background: none; }
 .guanrong .title a { color: #FFF; }
 
