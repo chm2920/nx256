@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>幸运大转盘</title>   
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link href="css/style.css?body=1" media="all" rel="stylesheet" />
+    <!--[if IE]>
+    <script type="text/javascript" src="js/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jQueryRotate.js"></script>
+</head>
+<body>
+<div class="demo clearfix">
+	<div class="lottery">
+		<div class="lottery-con">
+			<div id="disk"></div>
+			<div id="start"><img src="images/start.png" id="startbtn" style="-webkit-transform: rotate(247deg);"></div>
+		</div>
+	</div>
+	<div class="result" id="result">
+	</div>
+</div>
+
+<script type="text/javascript">
+$(function(){
+    var rolling = false;
+    $("#startbtn").rotate(0);
+	$("#startbtn").click(function(){
+		if(rolling){
+			return;
+		}
+		rolling = true;
+		
+		$("#startbtn").rotate({
+				always : true,
+				easing: $.easing.easeOutSine
+			});
+		
+		$('#result').html('...');
+		$.ajax({
+			'url' : 'result.html',
+			'method' : 'get',
+			'success' : function(data){
+				var id = Math.ceil(Math.random() * 12, 10)
+					, animateTo = id * 30 - 15;
+				
+				setTimeout(function(){
+						$("#startbtn").rotate({
+							'angle' : animateTo,
+							'callback' : function(){
+								$('#result').html(id + ' 中奖了！');
+								rolling = false;
+							}
+						});
+					}, 2000);
+			}
+		});
+	});
+});
+</script>
+</body>
+</html>
